@@ -5,7 +5,7 @@ name: hello-github-actions-workflow
 
 # Event that trigger the workflow (https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows):
 # - push -> when a commit is pushed
-# - workflow_dispatch -> to trigger manually
+# - workflow_dispatch -> to trigger manually (NOTE: Just into default branch: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch)
 on: [push, workflow_dispatch]
 
 # Define the list of jobs to be executed into this workflow
