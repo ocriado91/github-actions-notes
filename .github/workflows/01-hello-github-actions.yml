@@ -29,9 +29,3 @@ jobs:
         steps:
             - name: macos-step1
               run: echo "Hello from a MacOS image!"
-    all-images: # Fourth job to be performed.
-        # Also, we can define the images as matrix
-        runs-on: [ubuntu-latest, windows-latest, macos-latest]
-        steps:
-            - name: all-images-step1
-              run: echo "Hello World!"
