@@ -1,0 +1,31 @@
+# First example of Github Actions Workflow
+
+# Define the name of the workflow
+name: hello-github-actions-workflow
+
+# Event that trigger the workflow (https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows):
+# - push -> when a commit is pushed
+# - workflow_dispatch -> to trigger manually (NOTE: Just into default branch: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch)
+on: [push, workflow_dispatch]
+
+# Define the list of jobs to be executed into this workflow
+jobs:
+    job-1: # First job to be performed
+        runs-on: ubuntu-latest # Job to be executed into the the latest Ubuntu OS image (https://github.com/actions/runner-images)
+        steps:
+            - name: step1 # First step of job1
+              run: echo "Hello Github Actions! :)"
+            - name: step2 # Second step of job1
+              run: |
+                echo "This is the second step of job1"
+                echo "And also is an example of multiple line command execution"
+    job-2: # Second job to be performed
+        runs-on: windows-latest # Job to be executed into the latest Windows OS image
+        steps:
+            - name: windows-step1
+              run: echo "Hello from a Windows OS image!"
+    job-3: # Third job to be performed
+        runs-on: macos-latest
+        steps:
+            - name: macos-step1
+              run: echo "Hello from a MacOS image!"
