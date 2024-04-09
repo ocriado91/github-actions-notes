@@ -1,2 +1,2 @@
-# github-actions-notes
-Notes about Github Actions (official documentatn, certification, references...)
+# Github Actions Notes
+Notes about Github Actions (official documentation, certification, references...)
